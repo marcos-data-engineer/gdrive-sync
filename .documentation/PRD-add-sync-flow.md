@@ -70,8 +70,8 @@ Check `rclone.conf` for any existing Google Drive remote that has `client_id` + 
 ══ Step 2/7 — Google OAuth Credentials
 
   Found existing Google Drive credentials (from remote "my-drive"):
-    Client ID     : 1069449091950-mef0p1...r8j.apps.googleusercontent.com
-    Client Secret : GOCSPX-...F5Q83
+    Client ID     : <SEU_CLIENT_ID>
+    Client Secret : <SEU_CLIENT_SECRET>
 
   1) Reuse these credentials
   2) Enter new credentials
