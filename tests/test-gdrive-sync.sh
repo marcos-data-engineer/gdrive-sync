@@ -13,7 +13,7 @@
 #  No Google account or network access required.
 # ============================================================
 
-set -o pipefail
+set -euo pipefail
 
 # ----- Test framework ------------------------------------------------------
 PASS=0
@@ -67,21 +67,20 @@ run_test() {
 
   setup_tmpdir
 
-  local output rc
-  output=$( "$name" 2>&1 )
-  rc=$?
+  local output rc=0
+  output=$( "$name" 2>&1 ) || rc=$?
 
   teardown_tmpdir
 
   if [[ $rc -eq 0 ]]; then
-    ((PASS++))
+    ((PASS+=1))
     echo -e "  ${GREEN}✓${NC} $name"
-    [[ "$VERBOSE" == "1" && -n "$output" ]] && echo -e "    ${DIM}${output}${NC}"
+    if [[ "$VERBOSE" == "1" && -n "$output" ]]; then echo -e "    ${DIM}${output}${NC}"; fi
   elif [[ $rc -eq 77 ]]; then
-    ((SKIP++))
+    ((SKIP+=1))
     echo -e "  ${YELLOW}○${NC} $name ${DIM}(skipped)${NC}"
   else
-    ((FAIL++))
+    ((FAIL+=1))
     ERRORS+=("$name")
     echo -e "  ${RED}✗${NC} $name"
     echo -e "    ${DIM}${output}${NC}"
