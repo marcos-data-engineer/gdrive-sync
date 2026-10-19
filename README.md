@@ -234,8 +234,3 @@ Licença
 Este projeto está licenciado sob a Licença MIT — consulte o arquivo LICENSE para obter mais detalhes.
 
 ```
-
-
-<FollowUp>
-O README traduzido e o arquivo da imagem PNG gerado no Fedora atenderam totalmente às necessidades do projeto?
-</FollowUp>
