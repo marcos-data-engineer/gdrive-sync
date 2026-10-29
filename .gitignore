@@ -16,7 +16,7 @@ nano.save*
 CLAUDE.md
 doc.txt
 setup_notebook.txt
-.documentation/
+/.documentation
 
 # Configurations and Secrets
 *.env
