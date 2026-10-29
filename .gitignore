@@ -8,10 +8,15 @@ Thumbs.db
 .idea/
 *.swp
 *.swo
+nano.save*
 
-# AI Agents & Assistants
+# AI Agents & Private Context (synced via gdrive-sync)
 .clinerules
 .claude/
+CLAUDE.md
+doc.txt
+setup_notebook.txt
+.documentation/
 
 # Configurations and Secrets
 *.env
@@ -19,9 +24,6 @@ Thumbs.db
 rclone.conf
 *.credentials
 
-# Logs and Runtime Temporary Files
+# Logs and Runtime
 *.log
-*.log.old
-*.tmp
 *.lock
-*.pid
